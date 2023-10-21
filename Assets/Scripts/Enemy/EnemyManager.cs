@@ -11,6 +11,7 @@ public class EnemyManager : MonoBehaviour
     public bool IsHaveSecondWave = false;
     public GameObject SecondWaveEnemyManager;
     public GameObject[] GameObjectsToBeUnEnabledAfterCombat;
+    public GameObject[] GameObjectsToBeEnabledAfterCombat;
 
     [Header("Main AI Loop - Settings")]
     private Coroutine AI_Loop_Coroutine;
@@ -83,6 +84,13 @@ public class EnemyManager : MonoBehaviour
     {
         if (AliveEnemyCount() <= 0)
         {
+            for (int i = 0; i < GameObjectsToBeEnabledAfterCombat.Length; i++)
+            {
+                if (GameObjectsToBeEnabledAfterCombat[i] != null)
+                {
+                    GameObjectsToBeEnabledAfterCombat[i].SetActive(true);
+                }
+            }
 
             for (int i = 0; i < GameObjectsToBeUnEnabledAfterCombat.Length; i++)
             {
@@ -91,6 +99,9 @@ public class EnemyManager : MonoBehaviour
                     GameObjectsToBeUnEnabledAfterCombat[i].SetActive(false);
                 }
             }
+
+
+
             if (IsHaveSecondWave)
             {
                 SecondWaveEnemyManager.SetActive(true);

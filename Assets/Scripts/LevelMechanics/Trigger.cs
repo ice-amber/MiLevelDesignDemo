@@ -57,6 +57,8 @@ public class Trigger : MonoBehaviour
                                 GameObjectsToBeUnEnabledWhenPressInteraction[i].SetActive(false);
                             }
                         }
+
+                        IsNeedToCheckInteraction = false;
                     }
                 }
             }
@@ -81,6 +83,8 @@ public class Trigger : MonoBehaviour
                                 GameObjectsToBeUnEnabledWhenPressInteraction[i].SetActive(false);
                             }
                         }
+
+                        IsNeedToCheckInteraction = false;
                     }
                 }
             }

@@ -9,6 +9,8 @@ public class MovePlatform : MonoBehaviour
     public GameObject HighestPosition;
     public float MovingRate;
     public bool IsCanMove;
+    public bool IsNeedToResetPosition = false;
+    private Vector3 FirstPosition;
 
     protected CharacterInputSystem _inputSystem;
 
@@ -16,6 +18,7 @@ public class MovePlatform : MonoBehaviour
     void Start()
     {
         _inputSystem = FindObjectOfType<CharacterInputSystem>();
+        FirstPosition = this.transform.position;
     }
 
     // Update is called once per frame
@@ -61,6 +64,11 @@ public class MovePlatform : MonoBehaviour
             Debug.Log("Player Exit Trigger");
 
             IsCanMove = false;
+
+            if (IsNeedToResetPosition)
+            {
+                this.transform.position = FirstPosition;
+            }
         }
 
     }
