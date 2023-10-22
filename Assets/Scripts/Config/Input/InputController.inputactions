@@ -42,15 +42,6 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Defen",
-                    "type": "Button",
-                    "id": "5cbb4a37-50a2-434c-8ff8-2a2229bb4017",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
                     "name": "Run",
                     "type": "Button",
                     "id": "dd955311-843f-46e3-8e55-9d05ef4a1fa8",
@@ -108,6 +99,15 @@
                     "name": "PlatformDown",
                     "type": "Button",
                     "id": "fe6a78f6-8d4e-4b16-a2fc-fd6b38ab49db",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "FlyMode",
+                    "type": "Button",
+                    "id": "a18fcc0a-a196-4af2-a763-3a1f8b75f7d8",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -186,7 +186,7 @@
                     "id": "ff2cb83d-993d-42f4-9581-fa5e7f1de7c0",
                     "path": "<Pointer>/delta",
                     "interactions": "",
-                    "processors": "ScaleVector2",
+                    "processors": "ScaleVector2(x=0.5,y=0.5)",
                     "groups": "",
                     "action": "CameraLook",
                     "isComposite": false,
@@ -249,28 +249,6 @@
                 },
                 {
                     "name": "",
-                    "id": "34a918b4-76de-4ed4-af5f-dde069508a87",
-                    "path": "<Keyboard>/space",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Defen",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "b931f25c-083a-4ae6-a3c5-7b925ae41315",
-                    "path": "<Gamepad>/leftShoulder",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Defen",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "d66d38fa-592b-4d34-a3b0-2a44a6c9b188",
                     "path": "<Keyboard>/leftShift",
                     "interactions": "",
@@ -294,7 +272,7 @@
                 {
                     "name": "",
                     "id": "943e3bb3-d0fc-4892-98d8-97acc629247a",
-                    "path": "<Keyboard>/c",
+                    "path": "<Keyboard>/space",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -337,8 +315,30 @@
                 },
                 {
                     "name": "",
+                    "id": "86503141-f184-4bc0-8091-9388eb546821",
+                    "path": "<Keyboard>/capsLock",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "CameraLock",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "62a8f945-1e71-4214-a425-13f5bc5bc89b",
                     "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Interaction",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f22dcd16-70c4-4b1d-adeb-92899fcaaab8",
+                    "path": "<Keyboard>/e",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -359,12 +359,56 @@
                 },
                 {
                     "name": "",
+                    "id": "8ac1216a-2bc9-4aaf-850c-c21fddf41ba8",
+                    "path": "<Keyboard>/m",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PlatformUP",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "5555858f-d2e6-428b-b104-b8fadb064ddd",
                     "path": "<Gamepad>/leftShoulder",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "PlatformDown",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "95b8aab2-10f8-489e-8e52-f7330b123976",
+                    "path": "<Keyboard>/n",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PlatformDown",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "910ed48b-d35d-452d-8e56-e00094f74088",
+                    "path": "<Gamepad>/leftStickPress",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "FlyMode",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "52f06ca6-3e6c-4376-8468-996ae1c21657",
+                    "path": "<Keyboard>/backspace",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "FlyMode",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

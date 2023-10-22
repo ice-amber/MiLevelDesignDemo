@@ -68,6 +68,7 @@
     <Compile Include="Assets\Scripts\Player\Camera\TargetScript.cs" />
     <Compile Include="Assets\Scripts\Enemy\Health\AIHealthSystem.cs" />
     <Compile Include="Assets\Scripts\Config\Input\CharacterInputSystem.cs" />
+    <Compile Include="Assets\Scripts\LevelMechanics\TimerUI.cs" />
     <Compile Include="Assets\Scripts\MyTools\Unit\Singleton\SingletonBase.cs" />
     <Compile Include="Assets\Scripts\LevelMechanics\Trigger.cs" />
     <Compile Include="Assets\Scripts\Player\Camera\LockController.cs" />
@@ -97,7 +98,6 @@
     <Compile Include="Assets\Scripts\StateMachine\ScriptableObject\StateScriptableObject\StandState.cs" />
     <Compile Include="Assets\Scripts\BaseClass\Combat\CharacterCombatSystemBase.cs" />
     <Compile Include="Assets\Scripts\UI\PlayerHealthUIBar.cs" />
-    <Compile Include="Assets\Scripts\LevelMechanics\TimerUI.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

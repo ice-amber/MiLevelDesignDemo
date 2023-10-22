@@ -29,10 +29,6 @@ public class CharacterInputSystem : MonoBehaviour
     {
         get => _inputController.PlayerInput.RAtk.triggered;
     }
-    public bool playerDefen
-    {
-        get => _inputController.PlayerInput.Defen.phase == InputActionPhase.Performed;
-    }
 
     public bool playerRun
     {
@@ -68,7 +64,10 @@ public class CharacterInputSystem : MonoBehaviour
         get => _inputController.PlayerInput.PlatformDown.phase == InputActionPhase.Performed;
     }
 
-
+    public bool FlyMode
+    {
+        get => _inputController.PlayerInput.FlyMode.triggered;
+    }
 
 
 

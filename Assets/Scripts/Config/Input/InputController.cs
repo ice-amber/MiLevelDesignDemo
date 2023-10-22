@@ -64,15 +64,6 @@ public partial class @InputController: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Defen"",
-                    ""type"": ""Button"",
-                    ""id"": ""5cbb4a37-50a2-434c-8ff8-2a2229bb4017"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
                     ""name"": ""Run"",
                     ""type"": ""Button"",
                     ""id"": ""dd955311-843f-46e3-8e55-9d05ef4a1fa8"",
@@ -130,6 +121,15 @@ public partial class @InputController: IInputActionCollection2, IDisposable
                     ""name"": ""PlatformDown"",
                     ""type"": ""Button"",
                     ""id"": ""fe6a78f6-8d4e-4b16-a2fc-fd6b38ab49db"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""FlyMode"",
+                    ""type"": ""Button"",
+                    ""id"": ""a18fcc0a-a196-4af2-a763-3a1f8b75f7d8"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -208,7 +208,7 @@ public partial class @InputController: IInputActionCollection2, IDisposable
                     ""id"": ""ff2cb83d-993d-42f4-9581-fa5e7f1de7c0"",
                     ""path"": ""<Pointer>/delta"",
                     ""interactions"": """",
-                    ""processors"": ""ScaleVector2"",
+                    ""processors"": ""ScaleVector2(x=0.5,y=0.5)"",
                     ""groups"": """",
                     ""action"": ""CameraLook"",
                     ""isComposite"": false,
@@ -271,28 +271,6 @@ public partial class @InputController: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""34a918b4-76de-4ed4-af5f-dde069508a87"",
-                    ""path"": ""<Keyboard>/space"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Defen"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""b931f25c-083a-4ae6-a3c5-7b925ae41315"",
-                    ""path"": ""<Gamepad>/leftShoulder"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Defen"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
                     ""id"": ""d66d38fa-592b-4d34-a3b0-2a44a6c9b188"",
                     ""path"": ""<Keyboard>/leftShift"",
                     ""interactions"": """",
@@ -316,7 +294,7 @@ public partial class @InputController: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""943e3bb3-d0fc-4892-98d8-97acc629247a"",
-                    ""path"": ""<Keyboard>/c"",
+                    ""path"": ""<Keyboard>/space"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -359,8 +337,30 @@ public partial class @InputController: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""86503141-f184-4bc0-8091-9388eb546821"",
+                    ""path"": ""<Keyboard>/capsLock"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""CameraLock"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""62a8f945-1e71-4214-a425-13f5bc5bc89b"",
                     ""path"": ""<Gamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Interaction"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f22dcd16-70c4-4b1d-adeb-92899fcaaab8"",
+                    ""path"": ""<Keyboard>/e"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -381,12 +381,56 @@ public partial class @InputController: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""8ac1216a-2bc9-4aaf-850c-c21fddf41ba8"",
+                    ""path"": ""<Keyboard>/m"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PlatformUP"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""5555858f-d2e6-428b-b104-b8fadb064ddd"",
                     ""path"": ""<Gamepad>/leftShoulder"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""PlatformDown"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""95b8aab2-10f8-489e-8e52-f7330b123976"",
+                    ""path"": ""<Keyboard>/n"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PlatformDown"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""910ed48b-d35d-452d-8e56-e00094f74088"",
+                    ""path"": ""<Gamepad>/leftStickPress"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""FlyMode"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""52f06ca6-3e6c-4376-8468-996ae1c21657"",
+                    ""path"": ""<Keyboard>/backspace"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""FlyMode"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -401,7 +445,6 @@ public partial class @InputController: IInputActionCollection2, IDisposable
         m_PlayerInput_CameraLook = m_PlayerInput.FindAction("CameraLook", throwIfNotFound: true);
         m_PlayerInput_LAtk = m_PlayerInput.FindAction("LAtk", throwIfNotFound: true);
         m_PlayerInput_RAtk = m_PlayerInput.FindAction("RAtk", throwIfNotFound: true);
-        m_PlayerInput_Defen = m_PlayerInput.FindAction("Defen", throwIfNotFound: true);
         m_PlayerInput_Run = m_PlayerInput.FindAction("Run", throwIfNotFound: true);
         m_PlayerInput_Roll = m_PlayerInput.FindAction("Roll", throwIfNotFound: true);
         m_PlayerInput_Crouch = m_PlayerInput.FindAction("Crouch", throwIfNotFound: true);
@@ -409,6 +452,7 @@ public partial class @InputController: IInputActionCollection2, IDisposable
         m_PlayerInput_Interaction = m_PlayerInput.FindAction("Interaction", throwIfNotFound: true);
         m_PlayerInput_PlatformUP = m_PlayerInput.FindAction("PlatformUP", throwIfNotFound: true);
         m_PlayerInput_PlatformDown = m_PlayerInput.FindAction("PlatformDown", throwIfNotFound: true);
+        m_PlayerInput_FlyMode = m_PlayerInput.FindAction("FlyMode", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -474,7 +518,6 @@ public partial class @InputController: IInputActionCollection2, IDisposable
     private readonly InputAction m_PlayerInput_CameraLook;
     private readonly InputAction m_PlayerInput_LAtk;
     private readonly InputAction m_PlayerInput_RAtk;
-    private readonly InputAction m_PlayerInput_Defen;
     private readonly InputAction m_PlayerInput_Run;
     private readonly InputAction m_PlayerInput_Roll;
     private readonly InputAction m_PlayerInput_Crouch;
@@ -482,6 +525,7 @@ public partial class @InputController: IInputActionCollection2, IDisposable
     private readonly InputAction m_PlayerInput_Interaction;
     private readonly InputAction m_PlayerInput_PlatformUP;
     private readonly InputAction m_PlayerInput_PlatformDown;
+    private readonly InputAction m_PlayerInput_FlyMode;
     public struct PlayerInputActions
     {
         private @InputController m_Wrapper;
@@ -490,7 +534,6 @@ public partial class @InputController: IInputActionCollection2, IDisposable
         public InputAction @CameraLook => m_Wrapper.m_PlayerInput_CameraLook;
         public InputAction @LAtk => m_Wrapper.m_PlayerInput_LAtk;
         public InputAction @RAtk => m_Wrapper.m_PlayerInput_RAtk;
-        public InputAction @Defen => m_Wrapper.m_PlayerInput_Defen;
         public InputAction @Run => m_Wrapper.m_PlayerInput_Run;
         public InputAction @Roll => m_Wrapper.m_PlayerInput_Roll;
         public InputAction @Crouch => m_Wrapper.m_PlayerInput_Crouch;
@@ -498,6 +541,7 @@ public partial class @InputController: IInputActionCollection2, IDisposable
         public InputAction @Interaction => m_Wrapper.m_PlayerInput_Interaction;
         public InputAction @PlatformUP => m_Wrapper.m_PlayerInput_PlatformUP;
         public InputAction @PlatformDown => m_Wrapper.m_PlayerInput_PlatformDown;
+        public InputAction @FlyMode => m_Wrapper.m_PlayerInput_FlyMode;
         public InputActionMap Get() { return m_Wrapper.m_PlayerInput; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -519,9 +563,6 @@ public partial class @InputController: IInputActionCollection2, IDisposable
             @RAtk.started += instance.OnRAtk;
             @RAtk.performed += instance.OnRAtk;
             @RAtk.canceled += instance.OnRAtk;
-            @Defen.started += instance.OnDefen;
-            @Defen.performed += instance.OnDefen;
-            @Defen.canceled += instance.OnDefen;
             @Run.started += instance.OnRun;
             @Run.performed += instance.OnRun;
             @Run.canceled += instance.OnRun;
@@ -543,6 +584,9 @@ public partial class @InputController: IInputActionCollection2, IDisposable
             @PlatformDown.started += instance.OnPlatformDown;
             @PlatformDown.performed += instance.OnPlatformDown;
             @PlatformDown.canceled += instance.OnPlatformDown;
+            @FlyMode.started += instance.OnFlyMode;
+            @FlyMode.performed += instance.OnFlyMode;
+            @FlyMode.canceled += instance.OnFlyMode;
         }
 
         private void UnregisterCallbacks(IPlayerInputActions instance)
@@ -559,9 +603,6 @@ public partial class @InputController: IInputActionCollection2, IDisposable
             @RAtk.started -= instance.OnRAtk;
             @RAtk.performed -= instance.OnRAtk;
             @RAtk.canceled -= instance.OnRAtk;
-            @Defen.started -= instance.OnDefen;
-            @Defen.performed -= instance.OnDefen;
-            @Defen.canceled -= instance.OnDefen;
             @Run.started -= instance.OnRun;
             @Run.performed -= instance.OnRun;
             @Run.canceled -= instance.OnRun;
@@ -583,6 +624,9 @@ public partial class @InputController: IInputActionCollection2, IDisposable
             @PlatformDown.started -= instance.OnPlatformDown;
             @PlatformDown.performed -= instance.OnPlatformDown;
             @PlatformDown.canceled -= instance.OnPlatformDown;
+            @FlyMode.started -= instance.OnFlyMode;
+            @FlyMode.performed -= instance.OnFlyMode;
+            @FlyMode.canceled -= instance.OnFlyMode;
         }
 
         public void RemoveCallbacks(IPlayerInputActions instance)
@@ -606,7 +650,6 @@ public partial class @InputController: IInputActionCollection2, IDisposable
         void OnCameraLook(InputAction.CallbackContext context);
         void OnLAtk(InputAction.CallbackContext context);
         void OnRAtk(InputAction.CallbackContext context);
-        void OnDefen(InputAction.CallbackContext context);
         void OnRun(InputAction.CallbackContext context);
         void OnRoll(InputAction.CallbackContext context);
         void OnCrouch(InputAction.CallbackContext context);
@@ -614,5 +657,6 @@ public partial class @InputController: IInputActionCollection2, IDisposable
         void OnInteraction(InputAction.CallbackContext context);
         void OnPlatformUP(InputAction.CallbackContext context);
         void OnPlatformDown(InputAction.CallbackContext context);
+        void OnFlyMode(InputAction.CallbackContext context);
     }
 }

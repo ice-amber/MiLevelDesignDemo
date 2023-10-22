@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DG.Tweening;
+using System;
 using UnityEngine;
 using UnityEngine.Windows;
 
@@ -41,7 +42,9 @@ namespace UGG.Move
         [SerializeField] private Transform crouchDetectionPosition;
         [SerializeField] private Transform CameraLook;
         [SerializeField] private LayerMask crouchDetectionLayer;
-        
+
+        public bool IsFlyMode;
+
         //animationID
         private int crouchID = Animator.StringToHash("Crouch");
 
@@ -68,20 +71,35 @@ namespace UGG.Move
         protected override void Update()
         {
             base.Update();
-                    
-       
+
+            if (_inputSystem.FlyMode)
+            {
+                IsFlyMode = !IsFlyMode;
+            }
 
 
-            PlayerMoveDirection();
+            if (!IsFlyMode)
+            {
+                PlayerMoveDirection();
+            }
+            else
+            {
+                FlyMode();
+            }
+
             //UpdateRollAnimation();
         }
 
         private void LateUpdate()
         {
             //CharacterCrouchControl();
-            UpdateMotionAnimation();
-            UpdateCrouchAnimation();
-            UpdateRollAnimation();
+            if (!IsFlyMode)
+            {
+                UpdateMotionAnimation();
+                UpdateCrouchAnimation();
+                UpdateRollAnimation();
+            }
+
             
         }
 
@@ -116,7 +134,34 @@ namespace UGG.Move
 
         #endregion
         
-        
+        private void FlyMode()
+        {
+            Vector3 direction;
+
+                if (_inputSystem.playerMovement != Vector2.zero)
+                {
+
+                    targetRotation = Mathf.Atan2(_inputSystem.playerMovement.x, _inputSystem.playerMovement.y) * Mathf.Rad2Deg + characterCamera.localEulerAngles.y;
+
+                    //transform.eulerAngles = Vector3.up * Mathf.SmoothDampAngle(transform.eulerAngles.y, targetRotation, ref rotationVelocity, rotationLerpTime);
+
+                    direction = Quaternion.Euler(0f, targetRotation, 0f) * Vector3.forward;
+
+                    direction = direction.normalized;
+
+
+                    this.transform.DOMove(this.transform.position + direction, 0.4f);
+                }
+            if (_inputSystem.PlatformUp)
+            {
+                this.transform.DOMoveY((this.transform.position + Vector3.up).y, 0.2f);
+            }
+            if (_inputSystem.PlatformDown)
+            {
+                this.transform.DOMoveY((this.transform.position + Vector3.down).y, 0.2f);
+            }
+        }
+
         private void PlayerMoveDirection()
         {
             
